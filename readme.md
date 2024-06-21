@@ -1,3 +1,5 @@
+A JavaScript pogram that illustrates tic-tac-toe
+
 1. Show the user the 3x3 grid
    2A. User needs to pick a spot to play
    2B. Get all buttons.
