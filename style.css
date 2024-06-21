@@ -2,7 +2,8 @@ body {
 	height: 100vh;
 	font-family: monospace;
 	padding-top: 60px;
-	background: linear-gradient(50deg, rgba(254,254,253,1) 0%, rgb(165, 198, 148) 100%);
+	background: radial-gradient(rgba(254,254,253,1), rgb(186, 218, 170));
+
 	#main_title {
 		h1{
 			font-size: 75px;
