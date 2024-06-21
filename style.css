@@ -1,27 +1,46 @@
 body {
-	text-align: center;
-	background: #dfbd69;
-	color: white;
-	padding: 100px;
-	
-	h1{
-		font-size:80px;
-		text-shadow: 1px 1px 5px black;
+	height: 100vh;
+	font-family: monospace;
+	padding-top: 60px;
+	background: linear-gradient(50deg, rgba(254,254,253,1) 0%, rgb(165, 198, 148) 100%);
+	#main_title {
+		h1{
+			font-size: 75px;
+			font-weight: bold;
+		}
+		color: rgb(68, 144, 31);
+		text-shadow: 1px 1px 2px black;
+		padding: 50px 0;
 	}
-
-	button{
-		font-family: monospace;
+	div button{
+		background: black;
 		font-size: 100px;
-	}
-	p{
-		color: black;
-		font-size: 20px;
+		color: #fff;
+		text-shadow:
+			0 0 3px #fff,
+			0 0 5px #fff,
+			0 0 10px #fff,
+			0 0 21px #0fa,
+			0 0 41px #0fa,
+			0 0 46px #0fa,
+			0 0 51px #0fa,
+			0 0 75px #0fa;
 	}
 	#instructions{
-		width: 50%;
-		padding: 0 200px;
-		/* margin-left: 0; */
+		color: rgb(68, 144, 31);
+		font-size: 15px;
+		margin: 50px 0;
+		
+		#instructions_text{
+			border: 10px solid rgb(68, 144, 31);
+			border-radius: 25px;
+			p{
+				margin: 10px 0;
+				span{
+					font-weight: bold;
+				}
+			}
+		}
 	}
-
 }
 

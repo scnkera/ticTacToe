@@ -4,42 +4,20 @@ let board = [
 	["", "", ""],
 ];
 
-// for (let [rowIndex, row] of Object.entries(board)) {
-// 	for (let [colIndex, col] of Object.entries(row)) {
-// 		console.log(rowIndex, colIndex, col);
-// 	}
-// }
+let resetBoard = [
+	["", "", ""],
+	["", "", ""],
+	["", "", ""],
+];
 
 console.log("JS Linked");
 
-// //DOM & JS Variable, JS Data Structure (Array)
-// const allButtons = document.getElementsByTagName("button");
-// //JS Console & Output
-// console.log(allButtons);
-
-// //JS Variable (Global) Scope
-// let xPlayersTurn = true;
-
-// //JS For Loop
-// for (const button of allButtons) {
-// 	//JS Event & JS (Arrow) Function
-// 	button.onclick = () => {
-// 		//JS Conditional (If statement)
-// 		if (button.innerHTML !== "&nbsp;") {
-// 			alert("You little cheater");
-// 		} else {
-// 			//JS Ternary Operator (Inline If Statement)
-// 			button.innerHTML = xPlayersTurn ? "X" : "O";
-// 			xPlayersTurn = !xPlayersTurn;
-// 		}
-// 	};
-// }
 
 let xPlayersTurn = true;
 
 const buttonClicked = (event) => {
 	if (event.target.innerHTML !== "&nbsp;") {
-		alert("You little cheater");
+		alert("That spot is taken. Please try again!");
 	} else {
 		const rowIndex = event.target.getAttribute("data-rowIndex");
 		const colIndex = event.target.getAttribute("data-colIndex");
@@ -52,11 +30,20 @@ const buttonClicked = (event) => {
 		const winner = checkWin(board);
 		if (winner) {
             setTimeout(()=>{
-                alert(winner + " has won");
+                alert(winner + " has won!");
                 resetBoard();
             }, 250);
-
 		}
+
+		// Future edits; add a game draw functionality
+		// console.log(board[0][0]);
+		// const draw = checkDraw(board);
+		// if (draw) {
+        //     setTimeout(()=>{
+        //         alert("It's a draw!");
+        //         resetBoard();
+        //     }, 250);
+		// }
 	}
 };
 
@@ -84,47 +71,37 @@ const checkWin = (board) => {
 	// Check rows
 	for (let i = 0; i < 3; i++) {
 		if (
+			// Checks for a row win
 			board[i][0] &&
 			board[i][0] === board[i][1] &&
 			board[i][0] === board[i][2]
 		) {
 			return board[i][0]; // Return the winning player ("X" or "O")
-		}
-	}
-
-	// Check columns
-	for (let i = 0; i < 3; i++) {
-		if (
+		} else if (
+			// Checks for column win
 			board[0][i] &&
 			board[0][i] === board[1][i] &&
 			board[0][i] === board[2][i]
 		) {
 			return board[0][i]; // Return the winning player ("X" or "O")
+		} else if (
+			// checks for a diagonal win
+			board[0][0] &&
+			board[0][0] === board[1][1] &&
+			board[0][0] === board[2][2]
+		) {
+			return board[0][0]; // Return the winning player ("X" or "O")
+		}
+		else if (
+			// checks for a diagonal win
+			board[0][2] &&
+			board[0][2] === board[1][1] &&
+			board[0][2] === board[2][0]
+		) {
+			return board[0][2]; // Return the winning player ("X" or "O")
+		} else {
+				// No winner
+				return null
 		}
 	}
-
-	// Check diagonals
-	if (
-		board[0][0] &&
-		board[0][0] === board[1][1] &&
-		board[0][0] === board[2][2]
-	) {
-		return board[0][0]; // Return the winning player ("X" or "O")
-	}
-	if (
-		board[0][2] &&
-		board[0][2] === board[1][1] &&
-		board[0][2] === board[2][0]
-	) {
-		return board[0][2]; // Return the winning player ("X" or "O")
-	}
-
-	// No winner
-	return null;
 };
-
-let resetBoard = [
-	["", "", ""],
-	["", "", ""],
-	["", "", ""],
-];
