@@ -1,4 +1,5 @@
-A JavaScript pogram that illustrates tic-tac-toe
+A JavaScript pogram that illustrates tic-tac-toe the two player game
+Tech stack: JavaScript, CSS, HTML, and Bootstrap
 
 1. Show the user the 3x3 grid
    2A. User needs to pick a spot to play
