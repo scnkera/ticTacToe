@@ -13,11 +13,12 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<section class="container-fluid">
-			<div class="row text-center" id="main_title">
+		<div class="container-fluid">
+			<section class="row text-center" id="main_title">
 				<h1>Tic-Tac-Toe</h1>
-			</div>
-			<!-- <div class="row">
+			</section>
+
+			<section class="row">
 				<div class="col"></div>
 				<div class="col-lg-8 col-sm-12 text-center" id="board">
 					<div>
@@ -36,35 +37,17 @@
 						<button>&nbsp;</button>
 					</div>
 				</div>
-			</div>
-			<div class="col"></div> -->
-
-			<div class="text-center" id="board">
-				<div>
-					<button>&nbsp;</button>
-					<button>&nbsp;</button>
-					<button>&nbsp;</button>
-				</div>
-				<div>
-					<button>&nbsp;</button>
-					<button>&nbsp;</button>
-					<button>&nbsp;</button>
-				</div>
-				<div>
-					<button>&nbsp;</button>
-					<button>&nbsp;</button>
-					<button>&nbsp;</button>
-				</div>
-			</div>
-			<div class="row" id="instructions">
+				<div class="col"></div>
+			</section>
+			
+			<section class="row" id="instructions">
 				<div class="col"></div>
 				<div class="col-md-6 col-sm-12" id="instructions_text">
 					<p><span>Instructions:</span> Each player takes turns marking an empty square in a 3x3 grid, with one player as "X" and the other as "O". The first to get three marks in a row (horizontally, vertically, or diagonally) wins. If all squares are filled without a winner, the game ends in a draw.</p>
 				</div>
 				<div class="col"></div>
-				
-			</div>
-		</section>
+			</section>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
