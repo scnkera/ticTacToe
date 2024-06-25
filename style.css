@@ -3,7 +3,7 @@ body {
 	font-family: monospace;
 	padding-top: 20px;
 	background: radial-gradient(rgba(254,254,253,1), rgb(186, 218, 170));
-	min-width: 500px;
+	min-width: 900px;
 
 	#main_title {
 		h1{
